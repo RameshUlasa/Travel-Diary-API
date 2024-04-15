@@ -6,8 +6,8 @@ This is a RESTful API for managing user registration, authentication, and diary 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your/repository.git
-   cd repository-folder
+   git clone https://github.com/RameshUlasa/Travel-Diary-API.git
+   cd myapp
 
 2. Install Dependencies:
    ```bash
