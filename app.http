@@ -1,0 +1,57 @@
+
+POST http://localhost:5002/register
+Content-Type: application/json
+
+{
+  "name": "UserA",
+  "username": "userA@example.com",
+  "password": "secretpassword"
+}
+###
+
+POST  http://localhost:5002/login
+Content-Type: application/json
+
+{
+  "username": "userb@example.com",
+  "password": "secretpassword"
+}
+###
+
+POST  http://localhost:5002/diary-entries
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ1c2VyYkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMzE0NTI1Nn0.6QwquiN_LImmpbxwxpaxXvx4b0lw6wsDws4FKw66CZs
+
+{
+  "title": "Sunrise at Huderbad",
+  "description": "Visited Hyderabad for the first time",
+  "location": "Huderbad"
+}
+###
+
+GET http://localhost:5002/diary-entries
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ1c2VyYkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMzE0NTI1Nn0.6QwquiN_LImmpbxwxpaxXvx4b0lw6wsDws4FKw66CZs
+###
+
+GET http://localhost:5002/diary-entries/10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ1c2VyYkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMzE0NTI1Nn0.6QwquiN_LImmpbxwxpaxXvx4b0lw6wsDws4FKw66CZs
+###
+
+PUT  http://localhost:5002/diary-entries/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ1c2VyYkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMzE0NTI1Nn0.6QwquiN_LImmpbxwxpaxXvx4b0lw6wsDws4FKw66CZs
+
+{
+  "title": "Sunset at Goa",
+  "description": "Visited Goa for the first time",
+  "location": "Goa"
+}
+###
+
+DELETE  http://localhost:5002/diary-entries/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJ1c2VyYkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMzE0NTI1Nn0.6QwquiN_LImmpbxwxpaxXvx4b0lw6wsDws4FKw66CZs
+
+
